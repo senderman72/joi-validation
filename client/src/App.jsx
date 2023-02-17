@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import "./form.css";
 
 function App() {
-  const [email, setEmail] = useState("example@example.com");
-  const [password, setPassword] = useState("password123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [data, setData] = useState("");
 
   const handleFormSubmit = async (event) => {
@@ -24,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App container">
       <form onSubmit={handleFormSubmit}>
         <label>
           Email:
